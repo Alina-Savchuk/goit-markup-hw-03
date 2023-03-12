@@ -19,6 +19,32 @@ body {
   background-color: var(--primary-bkg-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
 .list {
   list-style: none;
 }
@@ -31,7 +57,50 @@ body {
   font-style: normal;
 }
 
+/* ==========COMPONENTS========== */
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ==========/COMPONENTS========== */
+
 /* ==========HEADER========== */
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.site-contacts {
+  display: flex;
+  align-items: center;
+}
+
 .logo-text {
   font-family: "Raleway";
   font-weight: 800;
@@ -40,10 +109,18 @@ body {
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--primary-text-color);
 }
+
 .logo-text-accent {
   color: var(--primary-brand-color);
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .menu-link {
@@ -59,16 +136,24 @@ body {
   color: var(--accent-color);
 }
 
-.contacts-item {
+.contacts {
+  margin-left: auto;
+}
+
+.site-contacts-item:not(:last-child):not(:last-child) {
+  margin-right: 40px;
+}
+
+.contacts-link {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
 }
 
-.contacts-item:hover,
-.contacts-item:focus,
-.contacts-item:active {
+.contacts-link:hover,
+.contacts-link:focus,
+.contacts-link:active {
   color: var(--accent-color);
 }
 /* ==========/HEADER========== */
@@ -76,6 +161,8 @@ body {
 /* ==========MAIN PAGE========== */
 /* ==========Hero========== */
 .hero-section {
+  padding-top: 188px;
+  padding-bottom: 188px;
   background-color: var(--primary-text-color);
   color: var(--hero-text-color);
 }
@@ -99,7 +186,6 @@ body {
   background: var(--primary-brand-color);
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .modal-btn:hover,
@@ -110,9 +196,6 @@ body {
 /* ==========/Hero========== */
 
 /* ==========Our advantages========== */
-.hidden {
-  opacity: 0;
-}
 
 .subtitle {
   font-weight: 500;
@@ -180,7 +263,6 @@ body {
   height: 48px;
   color: var(--primary-brand-color);
   background-color: var(--footer-logo-color);
-  cursor: pointer;
 }
 
 .filter-btn:hover,
