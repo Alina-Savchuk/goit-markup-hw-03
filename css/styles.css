@@ -111,6 +111,10 @@ button {
 /* ==========/COMPONENTS========== */
 
 /* ==========HEADER========== */
+.page-header {
+  border-bottom: 1px solid var(--footer-text-color);
+}
+
 .page-header-container {
   display: flex;
   align-items: center;
@@ -316,10 +320,6 @@ button {
 /* ==========/FOOTER========== */
 
 /* ==========PORTFOLIO PAGE========== */
-.page-header-portfolio {
-  border-bottom: 1px solid var(--footer-text-color);
-}
-
 .portfolio-section {
   padding-top: 96px;
   padding-bottom: 120px;
